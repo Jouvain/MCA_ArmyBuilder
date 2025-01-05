@@ -1,0 +1,143 @@
+{
+    "factions":[
+        {
+            "name": "Domination",
+            "description": "",
+            "specialRule": "",
+            "profiles": [
+                {
+                    "name": "U.R.C Aeternitas",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fulgurant",
+                            "Longueur": 30,
+                            "Rafale": 1,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "nano-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Aeternitas avec déphaseur",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "déphaseur",
+                            "Longueur": 50,
+                            "Rafale": 6,
+                            "Puissance": 8
+                        },
+                        {
+                            "name": "nano-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Aeternitas avec lance-flammes",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "nano-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Aeternitas avec carabine laser",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "carabine laser",
+                            "Longueur": 70,
+                            "Rafale": 1,
+                            "Puissance": 6
+                        },
+                        {
+                            "name": "nano-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "",
+            "description": "",
+            "specialRule": "",
+            "profiles": [
+                {
+                    "name": "",
+                    "type": "",
+                    "specialRule":null,
+                    "rank": null,
+                    "move": null,
+                    "endurance": null,
+                    "will": null,
+                    "combat": null,
+                    "cost": null,
+                    "weapons": [
+                        {
+                            "name": "",
+                            "Longueur": null,
+                            "Rafale": null,
+                            "Puissance": null
+                        },
+                        {
+                            "name": "",
+                            "Longueur": null,
+                            "Rafale": null,
+                            "Puissance": null
+                        }
+                    ]
+                }
+            ]
+        }   
+    ]
+}
