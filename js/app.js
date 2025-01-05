@@ -51,3 +51,21 @@ async function loadFactions() {
   
   init();
   
+  document.getElementById('export-pdf').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+  
+    doc.text("Liste d'armée", 10, 10);
+    const units = document.querySelectorAll('#unit-list input');
+    let y = 20;
+  
+    units.forEach(input => {
+      const quantity = input.value;
+      const unitName = input.dataset.unit;
+      doc.text(`${unitName}: ${quantity}`, 10, y);
+      y += 10;
+    });
+  
+    doc.save('army_list.pdf');
+  });
+  
