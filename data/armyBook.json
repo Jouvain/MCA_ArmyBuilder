@@ -2,8 +2,17 @@
     "factions":[
         {
             "name": "Domination",
-            "description": "",
-            "specialRule": "",
+            "description": "Sans états d'âme, les forces de la Domination avancent implacablement face à l'ennemi. Les soldats bio-mécaniques de ses armées combattent jusq'à la mort sans ressentir la peur ou le doute. Certains combattants modifiés tiennent d'ailleurs plus de la machine que de l'être humain, tant les nanotechnologies greffées greffées sur leurs corps ont pris l'ascendant sur leur organisme.",
+            "specialRule": [
+                {
+                    "name":"Neuromech",
+                    "rule": "Votre escouade ne peut inclure qu'un seul officier. Lorsque votre officier est éliminé, vous pouvez désigner un combattant d'infanterie allié situé à 20 cm ou moins. À la fin de votre tour, celui-ci devient un officer de grade égal."
+                },
+                {
+                    "name":"Éternel",
+                    "rule": "Au début de la partie, prenez autant de jetons de Protocole de Réparation que le grade de votre officier si celui-ci possède la règle Neuromech. Si un officier allié possédant la règle Neuromech est présent sur le théâtre des opérations quand un de vos combattants de type Infanterie est éliminé, vous pouvez choisir de défausser un jeton Protole de Réparation. Dans ce cas le combattant reste en jeu avec un PV."
+                }
+            ],
             "profiles": [
                 {
                     "name": "U.R.C Aeternitas",
@@ -104,13 +113,119 @@
                             "Puissance": 7
                         }
                     ]
+                },
+                {
+                    "name": "U.R.C Discorde",
+                    "type": "infanterie",
+                    "specialRule":"Brutal",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "nano-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Proserpine",
+                    "type": "infanterie",
+                    "specialRule":"Furtif, Grav-Suspenseur",
+                    "rank": 2,
+                    "move": 25,
+                    "endurance": 6,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "carabine laser",
+                            "Longueur": 70,
+                            "Rafale": 1,
+                            "Puissance": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Pluton",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "fusil disrupteur",
+                            "Longueur": 80,
+                            "Rafale": 0,
+                            "Puissance": 12
+                        }
+                    ]
+                },
+                {
+                    "name": "U.R.C Diane",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "déphaseur",
+                            "Longueur": 50,
+                            "Rafale": 6,
+                            "Puissance": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "B.R.I Jupiter",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 14,
+                    "will": 0,
+                    "combat": 6,
+                    "cost": 5,
+                    "weapons": [
+                        {
+                            "name": "canon disrupteur",
+                            "Longueur": 90,
+                            "Rafale": 0,
+                            "Puissance": 14
+                        },
+                        {
+                            "name": "déphaseur",
+                            "Longueur": 50,
+                            "Rafale": 6,
+                            "Puissance": 8
+                        }
+                    ]
                 }
             ]
         },
         {
-            "name": "",
+            "name": "Science",
             "description": "",
-            "specialRule": "",
+            "specialRule": [
+                {
+                    "name": "kjhé",
+                    "rule": "kjdbzjfdbj"
+                }
+            ],
             "profiles": [
                 {
                     "name": "",
@@ -138,6 +253,43 @@
                     ]
                 }
             ]
-        }   
+        },
+        {
+            "name": "",
+            "description": "",
+            "specialRule": [
+                {
+                    "name":"ejdbjed",
+                    "rule":"kjhkihih"
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "",
+                    "type": "",
+                    "specialRule":null,
+                    "rank": null,
+                    "move": null,
+                    "endurance": null,
+                    "will": null,
+                    "combat": null,
+                    "cost": null,
+                    "weapons": [
+                        {
+                            "name": "",
+                            "Longueur": null,
+                            "Rafale": null,
+                            "Puissance": null
+                        },
+                        {
+                            "name": "",
+                            "Longueur": null,
+                            "Rafale": null,
+                            "Puissance": null
+                        }
+                    ]
+                }
+            ]
+        }    
     ]
 }
