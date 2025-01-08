@@ -219,36 +219,247 @@
         },
         {
             "name": "Science",
-            "description": "",
+            "description": "Aucune force armée ne peut se targuer de rivaliser avec les armées de la sacro-sainte Science en ce qui concerne le matériel et l'équipement. Pourvus des meilleures innovations issues de ses laboratoires de recherche, les Clones sont le prolongement vivant de leurs armes.",
             "specialRule": [
                 {
-                    "name": "kjhé",
-                    "rule": "kjdbzjfdbj"
+                    "name": "Optique de visée assistée",
+                    "rule": "Tous les combattants d'infanterie de la faction sont équipés d'optiques de visée assistée, ce qui leur permet de lancer 2 dés supplémentaires pour tous leurs jets de résolution d'un Tir."
+                },
+                {
+                    "name": "Officers & hackers",
+                    "rule": "Tous les officiers de la faction bénéficient gratuitement de la règle spéciale 'Hacker'. De plus, lorsqu'un officier de la Science tente de prendre le contrôle d'un Drone, il ignore les résultats avec 0 et 1 réussite."
                 }
             ],
             "profiles": [
                 {
-                    "name": "",
-                    "type": "",
+                    "name": "Clone de ligne Pugnator",
+                    "type": "infanterie",
                     "specialRule":null,
-                    "rank": null,
-                    "move": null,
-                    "endurance": null,
-                    "will": null,
-                    "combat": null,
-                    "cost": null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 5,
+                    "will": 7,
+                    "combat": 3,
+                    "cost": 1,
                     "weapons": [
                         {
-                            "name": "",
-                            "Longueur": null,
-                            "Rafale": null,
-                            "Puissance": null
+                            "name": "pistolet automatique",
+                            "Longueur": 30,
+                            "Rafale": 3,
+                            "Puissance": 4
                         },
                         {
-                            "name": "",
-                            "Longueur": null,
-                            "Rafale": null,
-                            "Puissance": null
+                            "name": "vibro-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone de ligne Pugnator avec mitrailleuse",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 5,
+                    "will": 7,
+                    "combat": 3,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "vibro-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone de combat Ferrum",
+                    "type": "infanterie",
+                    "specialRule":"furtif",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 8,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "vibro-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone de soutien Continger",
+                    "type": "infanterie",
+                    "specialRule":"pistolero",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 8,
+                    "combat": 4,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "carabine tesla",
+                            "Longueur": 70,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "carabine tesla",
+                            "Longueur": 70,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone de soutien Responsum",
+                    "type": "infanterie",
+                    "specialRule": null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 8,
+                    "combat": 4,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil tesla",
+                            "Longueur": 100,
+                            "Rafale": 1,
+                            "Puissance": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone d'élite Venandus",
+                    "type": "infanterie",
+                    "specialRule":"grav-suspenseur",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 9,
+                    "combat": 4,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone d'élite Sagittari",
+                    "type": "infanterie",
+                    "specialRule":"grav-suspenseur",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 4,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone d'élite Gladius",
+                    "type": "infanterie",
+                    "specialRule":"pistolero, grav-suspenseur",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 4,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "pistolet automatique",
+                            "Longueur": 30,
+                            "Rafale": 3,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "pistolet automatique",
+                            "Longueur": 30,
+                            "Rafale": 3,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "vibro-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Clone d'élite Bellator",
+                    "type": "infanterie",
+                    "specialRule":"pistolero, grav-suspenseur",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 4,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "carabine tesla",
+                            "Longueur": 70,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "carabine tesla",
+                            "Longueur": 70,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Unité mobile Invictus",
+                    "type": "blindé",
+                    "specialRule": null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 12,
+                    "will": 9,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "canon disrupteur",
+                            "Longueur": 90,
+                            "Rafale": 0,
+                            "Puissance": 14
+                        },
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
                         }
                     ]
                 }
