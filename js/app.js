@@ -8,6 +8,8 @@ async function loadFactions() {
   async function init() {
     const factionsData = await loadFactions();
     populateFactionDropdown(factionsData.factions);
+    // createFactionCard(factionsData.factions[1]);
+    createGallery(factionsData.factions);
     console.log(factionsData.factions);
   }
   
@@ -27,6 +29,7 @@ async function loadFactions() {
       const selectedFaction = factions.find(f => f.name === event.target.value);
       if (selectedFaction) {
         showArmyCreation(selectedFaction);
+        storeInSession(selectedFaction.name);
       }
     });
   }
@@ -35,7 +38,7 @@ async function loadFactions() {
     document.getElementById('army-creation').style.display = 'block';
     const unitList = document.getElementById('unit-list');
     unitList.innerHTML = ''; // Clear existing units
-  
+    
     faction.profiles.forEach(profile => {
       const unitDiv = document.createElement('div');
       unitDiv.innerHTML = `
@@ -49,6 +52,26 @@ async function loadFactions() {
     });
   }
   
+function createGallery(factions) {
+  factions.forEach(faction => {
+    createFactionCard(faction);
+  })
+}
+
+  function createFactionCard(faction) {
+    // création des éléments
+    const factionCard = document.createElement("div");
+    const factionDesignation = document.createElement("p");
+    const factionLogo = document.createElement("img");
+    // attributs selon faction
+    factionDesignation.innerText = faction.name;
+    factionLogo.src = faction.logo;
+    // injection dans le DOM
+    factionCard.appendChild(factionLogo);
+    factionCard.appendChild(factionDesignation);
+    document.getElementById("gallery").appendChild(factionCard);
+  }
+
   init();
   
   document.getElementById('export-pdf').addEventListener('click', () => {
@@ -68,4 +91,12 @@ async function loadFactions() {
   
     doc.save('army_list.pdf');
   });
+
+  function storeInSession(faction) {
+    sessionStorage.setItem("faction", faction);
+  }
+
+  // document.getElementById("choixFaction").addEventListener("click", ()=> {
+  //   storeInSession("Domination");
+  // })
   

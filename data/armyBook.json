@@ -2,6 +2,7 @@
     "factions":[
         {
             "name": "Domination",
+            "logo": "../img/iconDomination.svg",
             "description": "Sans états d'âme, les forces de la Domination avancent implacablement face à l'ennemi. Les soldats bio-mécaniques de ses armées combattent jusq'à la mort sans ressentir la peur ou le doute. Certains combattants modifiés tiennent d'ailleurs plus de la machine que de l'être humain, tant les nanotechnologies greffées greffées sur leurs corps ont pris l'ascendant sur leur organisme.",
             "specialRule": [
                 {
@@ -219,6 +220,7 @@
         },
         {
             "name": "Science",
+            "logo": "../img/iconScience.svg",
             "description": "Aucune force armée ne peut se targuer de rivaliser avec les armées de la sacro-sainte Science en ce qui concerne le matériel et l'équipement. Pourvus des meilleures innovations issues de ses laboratoires de recherche, les Clones sont le prolongement vivant de leurs armes.",
             "specialRule": [
                 {
@@ -466,12 +468,1482 @@
             ]
         },
         {
-            "name": "",
-            "description": "",
+            "name": "Putrescence",
+            "logo": "../img/iconPutrescence.svg",
+            "description": "Affronter les légions de la Putrescence est une expérience horrible. Les camarades morts l'instant d'avant se relèvent pour se jeter sur leurs anciens compagnons. Surgissant des profondeurs des cités ou des souterrains de forage abandonnés, les horreurs qui firent jadis partie de l'humanité sèment à présent le chaos sur Mars.",
             "specialRule": [
                 {
-                    "name":"ejdbjed",
-                    "rule":"kjhkihih"
+                    "name":"Poste de commandement mobile",
+                    "rule":"Tous les blindés de la faction comptent comme des officiers dont le grade est égal à leur rang."
+                },
+                {
+                    "name":"Contagion",
+                    "rule":"Lorsqu'un combattant de type infanterie adverse est éliminé par une arme dotée de la règle spéciale Contagion, placez un Golem à 5cm ou moins de sa position, puis retirez le combattant du théâtre des opérations. Ce golem entre en jeu avec 1D6 points de vie et peut être placé au contact d'un combattant ennemi. Il compte dès lors comme un allié du joueur l'ayant fait apparaître. Un combattant portant une arme dotée de la règle Contagion est immunisé à cette règle."
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "Soldat de classe Golem",
+                    "type": "infanterie",
+                    "specialRule":"contagion (nano-injecteur Phénix)",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 4,
+                    "will": 0,
+                    "combat": 4,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "nano-injecteur Phénix",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Soldat de classe Aspic",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil laser",
+                            "Longueur": 60,
+                            "Rafale": 1,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Soldat de classe Aspic avec déphaseur",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "déphaseur",
+                            "Longueur": 50,
+                            "Rafale": 6,
+                            "Puissance": 8
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Soldat de classe Aspic avec fusil tesla",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "fusil tesla",
+                            "Longueur": 100,
+                            "Rafale": 1,
+                            "Puissance": 8
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Soldat de classe Chimère",
+                    "type": "infanterie",
+                    "specialRule":"contagion (canon Phénix, canon Phénis lourd)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "canon Phénix",
+                            "Longueur": 30,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "scie circulaire",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Soldat de classe Chimère avec canon Phénix lourd",
+                    "type": "infanterie",
+                    "specialRule":"contagion (canon Phénix, canon Phénis lourd)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "canon Phénix lourd",
+                            "Longueur": 60,
+                            "Rafale": 4,
+                            "Puissance": 6
+                        },
+                        {
+                            "name": "scie circulaire",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Super soldat de classe Phénix",
+                    "type": "infanterie",
+                    "specialRule":"contagion (canon Phénix)",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 9,
+                    "will": 0,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "canon laser",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 12
+                        },
+                        {
+                            "name": "canon Phénix",
+                            "Longueur": 30,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        }
+                    ]
+                },
+                {
+                    "name": "Appui-feu de classe Manticore",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 8,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "canon laser",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 12
+                        }
+                    ]
+                },
+                {
+                    "name": "Appui-feu de classe Wyvern",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 13,
+                    "will": 8,
+                    "combat": 5,
+                    "cost": 5,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Égalité",
+            "logo": "../img/iconEgalite.svg",
+            "description": "Les défenseurs de l'Égalité appartiennent pour la majorité à des groupes de travailleurs et ne reçoivent qu'un entraînement rudimentaire avant d'être envoyés en mission ; l'équipement dont ils bénéficient est un mélange de prises de guerre et d'engins de forage détournés. Mais l'Égalité compense ses faiblesses par un fort potentiel en volontaires et une ingéniosité surprenante, sans oublier leur arme la plus puissante : ses membres de battent pour un idéal.",
+            "specialRule": [
+                {
+                    "name":"l'appel aux armes",
+                    "rule":"Lors du recrutement, lorsque vous sélectionnez un Igualdad Soldado vous pouvez sélectionner gratuitement un deuxième Igualdad Soldado. Si vous souhaitez équiper ces Soldados, vous devez payer leurs options séparément. Il n'est pas possible de dépenser plus de la moitié de votre budget en Igualdad Soldados. Lors de la constitution de la Pioche d'Activation, ne placez qu'une carte par duo d'Igualdad Soldados. De plus, lorsque vous piochez une carte d'Activation, vous pouvez activer successivement deux Igualdad Soldados."
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "Igualdad Soldado",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 3,
+                    "will": 6,
+                    "combat": 4,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "fusil d'assaut",
+                            "Longueur": 30,
+                            "Rafale": 2,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Igualdad Soldado avec mortier",
+                    "type": "infanterie",
+                    "specialRule":"indirect (mortier)",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 3,
+                    "will": 6,
+                    "combat": 4,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "mortier",
+                            "Longueur": 40,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Igualdad Soldado avec lance-roquettes",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 3,
+                    "will": 6,
+                    "combat": 4,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Igualdad Soldado avec lance-flamme",
+                    "type": "infanterie",
+                    "specialRule":"souffle (lance-flamme)",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 3,
+                    "will": 6,
+                    "combat": 4,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Libertad Defensor",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "carabine tesla",
+                            "Longueur": 70,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Libertad Defensor avec mitrailleuse",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Libertad Defensor avec lance-roquettes",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Libertad Defensor avec lance-flamme",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Inocente Vengador",
+                    "type": "infanterie",
+                    "specialRule":"furtif",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil tesla",
+                            "Longueur": 100,
+                            "Rafale": 1,
+                            "Puissance": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "Justicia Protector",
+                    "type": "infanterie",
+                    "specialRule":"pistolero",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 12,
+                    "will": 8,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        }
+                    ]
+                },
+                {
+                    "name": "Unidad Vigilante",
+                    "type": "infanterie",
+                    "specialRule":"pistolero",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 12,
+                    "will": 8,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        }
+                    ]
+                },
+                {
+                    "name": "Martillo",
+                    "type": "blindé",
+                    "specialRule":"indirect (mortier)",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 13,
+                    "will": 9,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "mortier",
+                            "Longueur": 40,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        },
+                        {
+                            "name": "mortier",
+                            "Longueur": 40,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        }
+                    ]
+                },
+                {
+                    "name": "Hoz",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 13,
+                    "will": 9,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Horno",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 13,
+                    "will": 9,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        }
+                    ]
+                },
+                {
+                    "name": "Yunke",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 14,
+                    "will": 10,
+                    "combat": 5,
+                    "cost": 5,
+                    "weapons": [
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        },
+                        {
+                            "name": "lance-roquettes",
+                            "Longueur": 50,
+                            "Rafale": 3,
+                            "Puissance": 11
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ordre",
+            "logo": "../img/iconOrdre.svg",
+            "description": "L'Ordre dispose d'un réseau d'information tentaculaire et infiltre la plupart des milieux de la société. Ses troupes sont les mieux entraînées et ont la mainmise sur la production d'armes. Tous ses membres sont des soldats de métier aguerris, équipés pour pouvoir répondre à n'importe quel type de conflit. Habitués à la pression et aux aléas du champs de bataille, ces soldats font preuve de maîtrise et de sang-froid dans les pires situations.",
+            "specialRule": [
+                {
+                    "name":"Professionnels",
+                    "rule":"Lorsque vous effectuez un test de Volonté, vous pouvez choisir de relancer les dés de votre choix. Chaque dé ne peut être relancé qu'une fois. De plus, les Officiers peuvent donner des ordres sans limite de portée."
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "Star Eagle trooper",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 5,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "fusil d'assaut",
+                            "Longueur": 30,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Star Eagle trooper avec mitrailleuse",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 5,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Star Eagle trooper avec fusil tesla",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 5,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil tesla",
+                            "Longueur": 100,
+                            "Rafale": 1,
+                            "Puissance": 8
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Steel Falcon veteran",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil laser",
+                            "Longueur": 60,
+                            "Rafale": 1,
+                            "Puissance": 5
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Steel Falcon veteran avec mitrailleuse",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Steel Falcon veteran avec canon laser",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "canon laser",
+                            "Longueur": 70,
+                            "Rafale": 1,
+                            "Puissance": 12
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Steel Falcon veteran avec lance-missiles",
+                    "type": "infanterie",
+                    "specialRule":"guidage laser (lance-missiles)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-missiles",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 10
+                        },
+                        {
+                            "name": "couteau baïonnette",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 3
+                        }
+                    ]
+                },
+                {
+                    "name": "Shock Vulture Assault",
+                    "type": "infanterie",
+                    "specialRule":"grav-suspenseur",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "pistolet mitrailleur",
+                            "Longueur": 30,
+                            "Rafale": 3,
+                            "Puissance": 3
+                        },
+                        {
+                            "name": "pneumo-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Shock Vulture Assault avec lance-flamme",
+                    "type": "infanterie",
+                    "specialRule":"grav-suspenseur",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "pneumo-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Steel Thunder Armored Unit",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "canon laser",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 12
+                        }
+                    ]
+                },
+                {
+                    "name": "Shock Tempest Armored Unit",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "pneumo-lame",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Thunerstrike L.B.E",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "canon laser",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 12
+                        }
+                    ]
+                },
+                {
+                    "name": "Iron Rain L.B.E",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "mitrailleuse",
+                            "Longueur": 40,
+                            "Rafale": 7,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Deathblow H.B.E",
+                    "type": "blindé",
+                    "specialRule":"guidage laser (lance-missiles)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 13,
+                    "will": 7,
+                    "combat": 5,
+                    "cost": 5,
+                    "weapons": [
+                        {
+                            "name": "lance-missiles",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 10
+                        },
+                        {
+                            "name": "lance-missiles",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Violence",
+            "logo": "../img/iconViolence.svg",
+            "description": "Nomades et sans pitié, guidés par les visions de leurs meneurs, les combattants de la Violence livrent une guerilla contre leurs oppresseurs. Malgré leur nombre limité, ce sont des adversaires redoutables, endurcis par l'environnement hostile dans lequel ils évoluent et dotés de caractéristiques physiques supérieures à celle des humains.",
+            "specialRule": [
+                {
+                    "name":"Impétuosité",
+                    "rule":"Une fois par tour, lorsqu'une carte Activation adverse est piochée, vous pouvez activer un de vos combattants à la place."
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "Disciple-singe",
+                    "type": "infanterie",
+                    "specialRule":"brutal, grav-suspenseur",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-tigre",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 7,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil Ki",
+                            "Longueur": 40,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-serpent",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "fusil Ki",
+                            "Longueur": 40,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-serpent avec canon Ki",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "canon Ki",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 11
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-serpent avec mitrailleuse Ki",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse Ki",
+                            "Longueur": 50,
+                            "Rafale": 8,
+                            "Puissance": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-serpent avec lance-grenade",
+                    "type": "infanterie",
+                    "specialRule":"indirect (lance-grenade)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-grenade",
+                            "Longueur": 30,
+                            "Rafale": 0,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Disciple-serpent avec lance-flamme",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 6,
+                    "combat": 5,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        }
+                    ]
+                },
+                {
+                    "name": "Initié-grue",
+                    "type": "infanterie",
+                    "specialRule":"furtif, pistolero",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 9,
+                    "will": 8,
+                    "combat": 6,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "fusil Ki",
+                            "Longueur": 40,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "fusil Ki",
+                            "Longueur": 40,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        }
+                    ]
+                },
+                {
+                    "name": "Initié-panthère",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 8,
+                    "combat": 6,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "fusil Ki",
+                            "Longueur": 40,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        },
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Initié-panthère avec canon Ki",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 8,
+                    "combat": 6,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "canon Ki",
+                            "Longueur": 70,
+                            "Rafale": 0,
+                            "Puissance": 11
+                        },
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Initié-panthère avec mortier",
+                    "type": "infanterie",
+                    "specialRule":"indirect (mortier)",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 8,
+                    "combat": 6,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "mortier",
+                            "Longueur": 40,
+                            "Rafale": 0,
+                            "Puissance": 6
+                        },
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Initié-panthère avec lance-flamme",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 10,
+                    "will": 8,
+                    "combat": 6,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "gantelet-choc",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Machine-dragon",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 6,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        },
+                        {
+                            "name": "lance-flamme",
+                            "Longueur": "souffle",
+                            "Rafale": 0,
+                            "Puissance": 9
+                        }
+                    ]
+                },
+                {
+                    "name": "Machine-lion",
+                    "type": "blindé",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 6,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "mitrailleuse Ki",
+                            "Longueur": 50,
+                            "Rafale": 8,
+                            "Puissance": 8
+                        },
+                        {
+                            "name": "mitrailleuse Ki",
+                            "Longueur": 50,
+                            "Rafale": 8,
+                            "Puissance": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Faim",
+            "logo": "../img/iconFaim.svg",
+            "description": "Les essaims affamés ont trouvé dans la chair humaine une nouvelle ressource vitale facile d'accès. Caractérisées par un instinct de prédateurs absolus et capables de diversifications génétiques rapides, les nombreuses sous-espèces de la Faim sont vite devenues capables de contrer les armes humaines. Peu dotées pour le combat à distance, c'est au contact que s'exprime tout le potentiel meurtrier des incarnations de la Faim.",
+            "specialRule": [
+                {
+                    "name":"Meute hurlante",
+                    "rule":"Une fois que tous les combattants ont été déployés, y compris les infiltrateurs, vous pouvez re-déployer jusqu'à 6 combattants d'infanterie de rang 1, en respectant les règles normales de déploiement. De plus, tous les blindés de la Faim peuvent être promus Officiers."
+                },
+                {
+                    "name":"Titans",
+                    "rule":"Les blindés de la Faim ne peuvent pas bénéficier de la règle Structure Légère."
+                }
+            ],
+            "profiles": [
+                {
+                    "name": "Pupiphora 'Griffeur'",
+                    "type": "infanterie",
+                    "specialRule":"brutal",
+                    "rank": 1,
+                    "move": 25,
+                    "endurance": 3,
+                    "will": 5,
+                    "combat": 4,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "dents",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Cursiphora 'Chasseur'",
+                    "type": "infanterie",
+                    "specialRule":"furtif",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 4,
+                    "will": 5,
+                    "combat": 4,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "griffes et venin",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Spiculiphora 'Lanceur'",
+                    "type": "infanterie",
+                    "specialRule":null,
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 4,
+                    "will": 5,
+                    "combat": 4,
+                    "cost": 1,
+                    "weapons": [
+                        {
+                            "name": "lance-dards",
+                            "Longueur": 30,
+                            "Rafale": 4,
+                            "Puissance": 4
+                        }
+                    ]
+                },
+                {
+                    "name": "Mordiphora 'Dépeceur'",
+                    "type": "infanterie",
+                    "specialRule":"brutal",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 6,
+                    "will": 6,
+                    "combat": 6,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "griffes",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Fugiphora 'Sauteur'",
+                    "type": "infanterie",
+                    "specialRule":"Furtif, Grav-Suspenseur",
+                    "rank": 2,
+                    "move": 25,
+                    "endurance": 6,
+                    "will": 5,
+                    "combat": 5,
+                    "cost": 2,
+                    "weapons": [
+                        {
+                            "name": "serres",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        }
+                    ]
+                },
+                {
+                    "name": "Praediphora 'Cracheur'",
+                    "type": "infanterie",
+                    "specialRule":"Corrosif (Acide)",
+                    "rank": 3,
+                    "move": 20,
+                    "endurance": 8,
+                    "will": 7,
+                    "combat": 7,
+                    "cost": 3,
+                    "weapons": [
+                        {
+                            "name": "pinces",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "acide",
+                            "Longueur": 30,
+                            "Rafale": 1,
+                            "Puissance": 10
+                        }
+                    ]
+                },
+                {
+                    "name": "Corrosophora 'Cracheur'",
+                    "type": "blindé",
+                    "specialRule":"Corrosif (Bile)",
+                    "rank": 1,
+                    "move": 20,
+                    "endurance": 9,
+                    "will": 8,
+                    "combat": 7,
+                    "cost": 4,
+                    "weapons": [
+                        {
+                            "name": "griffes et venin",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "bile",
+                            "Longueur": 30,
+                            "Rafale": 2,
+                            "Puissance": 5
+                        }
+                    ]
+                },
+                {
+                    "name": "Insolidiphora 'Equarisseur'",
+                    "type": "blindé",
+                    "specialRule":"Corrosif (Acide)",
+                    "rank": 2,
+                    "move": 20,
+                    "endurance": 11,
+                    "will": 9,
+                    "combat": 7,
+                    "cost": 5,
+                    "weapons": [
+                        {
+                            "name": "pinces",
+                            "Longueur": 0,
+                            "Rafale": 0,
+                            "Puissance": 7
+                        },
+                        {
+                            "name": "acide",
+                            "Longueur": 30,
+                            "Rafale": 1,
+                            "Puissance": 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Fortune",
+            "logo": "../img/iconFortune.svg",
+            "description": "Quand nécessité fait loi, les principes et les allégeances passent parfois au second plan. Ceux qui sont doués de talents particuliers vendent alors leurs services aux plus offrants. Le contexte violent ajouté à la misère sociale ou simplement l'appât du gain engendre fatalement l'apparition de mercenaires, chasseurs de primes et autres justiciers. Si vous avez de quoi payer, vous trouverez forcément quelqu'un prêt à réaliser votre sale besogne.",
+            "specialRule": [
+                {
+                    "name":"Mercenaires",
+                    "rule":"Lorsque vous recrutez une escouade de la Fortune, vus pouvez sélectionner des combattants venant de toutes les autres factions du jeu."
+                },
+                {
+                    "name":"Clandestinité",
+                    "rule":"Les armes spéciales coûtent 1 point de plus."
                 }
             ],
             "profiles": [
@@ -501,6 +1973,6 @@
                     ]
                 }
             ]
-        }    
+        }              
     ]
 }
