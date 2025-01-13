@@ -70,6 +70,7 @@ function createGallery(factions) {
     factionCard.appendChild(factionLogo);
     factionCard.appendChild(factionDesignation);
     document.getElementById("gallery").appendChild(factionCard);
+    factionCard.classList.add("factionCard");
   }
 
   init();

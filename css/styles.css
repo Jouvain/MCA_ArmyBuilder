@@ -2,6 +2,46 @@
     --marsRed: #9f0000;
 }
 
+.header_highBar h1 {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--marsRed); 
+}
+
+.header_lowBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    padding: 20px;
+}
+.factionCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--marsRed);
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    color: white;
+}
+.factionCard img {
+    color: white;
+    height: 100px;
+}
+
 /* titre MCA 
 font-family: "Exo 2";
 font-weight: 60;
