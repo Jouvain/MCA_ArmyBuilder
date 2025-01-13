@@ -2,7 +2,7 @@
     "factions":[
         {
             "name": "Domination",
-            "logo": "/../img/iconDomination.svg",
+            "logo": "./img/iconDomination.svg",
             "description": "Sans états d'âme, les forces de la Domination avancent implacablement face à l'ennemi. Les soldats bio-mécaniques de ses armées combattent jusq'à la mort sans ressentir la peur ou le doute. Certains combattants modifiés tiennent d'ailleurs plus de la machine que de l'être humain, tant les nanotechnologies greffées greffées sur leurs corps ont pris l'ascendant sur leur organisme.",
             "specialRule": [
                 {
@@ -220,7 +220,7 @@
         },
         {
             "name": "Science",
-            "logo": "/../img/iconScience.svg",
+            "logo": "./img/iconScience.svg",
             "description": "Aucune force armée ne peut se targuer de rivaliser avec les armées de la sacro-sainte Science en ce qui concerne le matériel et l'équipement. Pourvus des meilleures innovations issues de ses laboratoires de recherche, les Clones sont le prolongement vivant de leurs armes.",
             "specialRule": [
                 {
@@ -469,7 +469,7 @@
         },
         {
             "name": "Putrescence",
-            "logo": "/../img/iconPutrescence.svg",
+            "logo": "./img/iconPutrescence.svg",
             "description": "Affronter les légions de la Putrescence est une expérience horrible. Les camarades morts l'instant d'avant se relèvent pour se jeter sur leurs anciens compagnons. Surgissant des profondeurs des cités ou des souterrains de forage abandonnés, les horreurs qui firent jadis partie de l'humanité sèment à présent le chaos sur Mars.",
             "specialRule": [
                 {
@@ -693,7 +693,7 @@
         },
         {
             "name": "Égalité",
-            "logo": "/../img/iconEgalite.svg",
+            "logo": "./img/iconEgalite.svg",
             "description": "Les défenseurs de l'Égalité appartiennent pour la majorité à des groupes de travailleurs et ne reçoivent qu'un entraînement rudimentaire avant d'être envoyés en mission ; l'équipement dont ils bénéficient est un mélange de prises de guerre et d'engins de forage détournés. Mais l'Égalité compense ses faiblesses par un fort potentiel en volontaires et une ingéniosité surprenante, sans oublier leur arme la plus puissante : ses membres de battent pour un idéal.",
             "specialRule": [
                 {
@@ -1069,7 +1069,7 @@
         },
         {
             "name": "Ordre",
-            "logo": "/../img/iconOrdre.svg",
+            "logo": "./img/iconOrdre.svg",
             "description": "L'Ordre dispose d'un réseau d'information tentaculaire et infiltre la plupart des milieux de la société. Ses troupes sont les mieux entraînées et ont la mainmise sur la production d'armes. Tous ses membres sont des soldats de métier aguerris, équipés pour pouvoir répondre à n'importe quel type de conflit. Habitués à la pression et aux aléas du champs de bataille, ces soldats font preuve de maîtrise et de sang-froid dans les pires situations.",
             "specialRule": [
                 {
@@ -1420,7 +1420,7 @@
         },
         {
             "name": "Violence",
-            "logo": "/../img/iconViolence.svg",
+            "logo": "./img/iconViolence.svg",
             "description": "Nomades et sans pitié, guidés par les visions de leurs meneurs, les combattants de la Violence livrent une guerilla contre leurs oppresseurs. Malgré leur nombre limité, ce sont des adversaires redoutables, endurcis par l'environnement hostile dans lequel ils évoluent et dotés de caractéristiques physiques supérieures à celle des humains.",
             "specialRule": [
                 {
@@ -1747,7 +1747,7 @@
         },
         {
             "name": "Faim",
-            "logo": "/../img/iconFaim.svg",
+            "logo": "./img/iconFaim.svg",
             "description": "Les essaims affamés ont trouvé dans la chair humaine une nouvelle ressource vitale facile d'accès. Caractérisées par un instinct de prédateurs absolus et capables de diversifications génétiques rapides, les nombreuses sous-espèces de la Faim sont vite devenues capables de contrer les armes humaines. Peu dotées pour le combat à distance, c'est au contact que s'exprime tout le potentiel meurtrier des incarnations de la Faim.",
             "specialRule": [
                 {
@@ -1934,7 +1934,7 @@
         },
         {
             "name": "Fortune",
-            "logo": "/../img/iconFortune.svg",
+            "logo": "./img/iconFortune.svg",
             "description": "Quand nécessité fait loi, les principes et les allégeances passent parfois au second plan. Ceux qui sont doués de talents particuliers vendent alors leurs services aux plus offrants. Le contexte violent ajouté à la misère sociale ou simplement l'appât du gain engendre fatalement l'apparition de mercenaires, chasseurs de primes et autres justiciers. Si vous avez de quoi payer, vous trouverez forcément quelqu'un prêt à réaliser votre sale besogne.",
             "specialRule": [
                 {
