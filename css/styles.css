@@ -20,11 +20,18 @@ body {
     padding: 0;
 }
 
-#gallery {
+/* #gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
-    padding: 20px;
+    width: 100%;
+    place-items: center;
+} */
+#gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .factionCard {
     display: flex;
@@ -36,6 +43,7 @@ body {
     height: 200px;
     width: 200px;
     color: white;
+    margin: 10px;
 }
 .factionCard img {
     color: white;
