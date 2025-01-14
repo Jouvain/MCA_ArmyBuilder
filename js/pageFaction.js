@@ -14,6 +14,7 @@ const presentationGamewise = document.querySelector(".presentationGamewise");
 // affiche le logo et le lore de la Faction
 const logoFaction = document.createElement("img");
 logoFaction.src=storedFaction.logo;
+logoFaction.classList.add("logoFaction");
 presentationLorewise.appendChild(logoFaction);
 const loreFaction = document.createElement("p");
 loreFaction.innerText = storedFaction.description;

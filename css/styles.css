@@ -86,7 +86,25 @@ a {
     margin: 10px;
 }
 .factionCard img {
-    color: yellow;
     height: 100px;
+    
+}
+
+.presentationLorewise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+.presentationLorewise p {
+  font-style: italic;
+  text-align: justify;
+}
+
+.logoFaction {
+  filter: invert(88%) sepia(34%) saturate(7483%) hue-rotate(352deg) brightness(103%) contrast(118%);
+  margin-right: 10%;
+  height: 100px;
 }
 
