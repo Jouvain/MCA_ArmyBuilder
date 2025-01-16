@@ -20,51 +20,80 @@ const loreFaction = document.createElement("p");
 loreFaction.innerText = storedFaction.description;
 presentationLorewise.appendChild(loreFaction);
 
+// affiche les spécialisations possibles
+// --- TODO ---
+
 function createUnitCard(faction, unit) {
     // creation de nodes
     const unitCard = document.createElement("div");
+    // head
     const unitLogo = document.createElement("img");
     const unitName = document.createElement("h3");
     const unitCost = document.createElement("p");
+    const head = document.createElement("div");
+    // type & rank
     const unitTypeRank = document.createElement("p");
+    const typeAndrank = document.createElement("div");
+    // stats
     const unitM = document.createElement("p");
     const unitE = document.createElement("p");
     const unitV = document.createElement("p");
     const unitC = document.createElement("p");
+    const stats = document.createElement("div");
+    // weaponHead
     const unitWeaponTitle = document.createElement("p");
+    const weaponHead = document.createElement("div");
+    // weapons 
+    
+    // special
     const unitRules = document.createElement("p");
-
+    const special = document.createElement("div");
 
 
     // configuration des nodes
+    unitCard.classList.add("unitCard");
     unitLogo.src = faction.logo;
     unitName.innerText = unit.name;
     unitCost.innerText = unit.cost;
+    head.classList.add("unitCard_head");
     unitTypeRank.innerText = `type : ${unit.type} / rang: ${unit.rank}`;
+    typeAndrank.classList.add("unitCard_typeAndRank");
     unitM.innerText = `M : ${unit.move}`;
     unitE.innerText = `E : ${unit.endurance}`;
     unitV.innerText = `V : ${unit.will}`;
     unitC.innerText = `C : ${unit.combat}`;
+    stats.classList.add("unitCard_stats");
     unitWeaponTitle.innerText = "Armes";
+    
+    weaponHead.classList.add("unitCard_weaponHead");
     unitRules.innerText = unit.specialRule;
+    special.classList.add("unitCard_special");
 
     // injection des nodes
     presentationGamewise.appendChild(unitCard);
     // --- div head
-    unitCard.appendChild(unitLogo);
-    unitCard.appendChild(unitName);
-    unitCard.appendChild(unitCost);
+    unitCard.appendChild(head);
+    head.appendChild(unitLogo);
+    head.appendChild(unitName);
+    head.appendChild(unitCost);
     // --- div type & rank
-    unitCard.appendChild(unitTypeRank);
+    unitCard.appendChild(typeAndrank);
+    typeAndrank.appendChild(unitTypeRank);
     // --- div stats
-    unitCard.appendChild(unitM);
-    unitCard.appendChild(unitE);
-    unitCard.appendChild(unitV);
-    unitCard.appendChild(unitC);
+    unitCard.appendChild(stats);
+    stats.appendChild(unitM);
+    stats.appendChild(unitE);
+    stats.appendChild(unitV);
+    stats.appendChild(unitC);
     // --- div weapon head
-    unitCard.appendChild(unitWeaponTitle);
+    unitCard.appendChild(weaponHead);
+    weaponHead.appendChild(unitWeaponTitle);
     // --- div weapons stats
+    
     unit.weapons.forEach(weapon => {
+        const weapons = document.createElement("div");
+        unitCard.appendChild(weapons);
+        weapons.classList.add("unitCard_weapons");
         const weaponName = document.createElement("p");
         const weaponLongueur = document.createElement("p");
         const weaponRafale = document.createElement("p");
@@ -73,13 +102,14 @@ function createUnitCard(faction, unit) {
         weaponLongueur.innerText = `L : ${weapon.Longueur}`;
         weaponRafale.innerText = `R : ${weapon.Rafale}`;
         weaponPuissance.innerText = `P : ${weapon.Puissance}`;
-        unitCard.appendChild(weaponName);
-        unitCard.appendChild(weaponLongueur);
-        unitCard.appendChild(weaponRafale);
-        unitCard.appendChild(weaponPuissance);
+        weapons.appendChild(weaponName);
+        weapons.appendChild(weaponLongueur);
+        weapons.appendChild(weaponRafale);
+        weapons.appendChild(weaponPuissance);
     });
     // --- div special rules
-    unitCard.appendChild(unitRules);
+    unitCard.appendChild(special);
+    special.appendChild(unitRules);
 }
 
 createUnitCard(storedFaction, storedFaction.profiles[4]);

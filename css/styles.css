@@ -119,3 +119,41 @@ a {
   cursor: pointer;
 }
 
+
+.unitCard {
+  background-color: var(--marsRed);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* width: 33%; */
+}
+.unitCard_head {
+  display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 20px 10px 20px;
+  img {
+    width: 50px;
+  }
+}
+.unitCard_typeAndRank {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.unitCard_stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.unitCard_weaponHead {
+  text-align: center;
+}
+.unitCard_weapons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.unitCard_special {
+  text-align: center;
+}
