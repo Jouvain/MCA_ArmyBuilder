@@ -108,7 +108,7 @@ a {
 }
 .interaction {
   text-align: center;
-  margin: 5% auto 5% auto;
+  margin: 2% auto 2% auto;
 }
 .interaction_createBtn {
   background-color: var(--marsRed);
@@ -132,7 +132,8 @@ a {
 }
 
 .factionRulesWrapper {
-  padding: 5%;
+  margin: 0 auto 0 auto;
+  width: 80%;
 }
 
 .ruleName {
