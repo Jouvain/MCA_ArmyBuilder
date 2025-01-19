@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Army Builder</title>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/pageFaction.js" defer></script>
+        <!-- <script src="js/pageFaction.js" defer></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
       </head>
       <body id="body">
@@ -16,21 +16,31 @@
               <a href="index.html"><img src="img/triangle.svg" class="logo" alt="Logo" /></a>
               <div class="text-wrapper">
                 <p class="headline">Choix de la Faction</p>
+                <button>&#x1F5A8</button>
               </div>
             </div>
           </div>
         </header>
         <main>
-          <section class="presentationLorewise">
-
-          </section>
-          <section class="interaction">
-            <a href="pageSquad.html"><button class="interaction_createBtn"> Créer une escouade </button></a>
-          </section>
-          <section class="presentationGamewise">
-            <div class="gallery">
-
+          <section class="resume">
+            <div class="squadResume">
+                <form>
+                    <label>Nom de l'escouade :</label>
+                    <input type="text"/>
+                </form>
+                <div class="costContainer">
+                    <p>Coût :</p>
+                    <p class="cost">X</p>
+                </div>                
             </div>
+            <div class="mods">
+                <button>Blitz</button>
+                <button>Standard</button>
+                <button>Héroïque</button>
+            </div>
+          </section>
+          <section class="builder">
+            
           </section>
         </main>
       </body>
