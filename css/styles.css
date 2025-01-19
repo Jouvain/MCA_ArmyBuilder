@@ -119,13 +119,43 @@ a {
   cursor: pointer;
 }
 
+/* .presentationGamewise {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+  padding: 15px;
+} */
+.specialties {
+  text-align: center;
+  margin: 30px;
+  font-weight: 600;
+}
+
+.factionRulesWrapper {
+  padding: 5%;
+}
+
+.ruleName {
+  font-weight: bold;
+  color: var(--marsRed);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .unitCard {
   background-color: var(--marsRed);
   display: flex;
   flex-direction: column;
   color: white;
-  /* width: 33%; */
+  height: 400px;
+  border-radius: 5%;
+  width: 400px;
+  margin: 5px;
 }
 .unitCard_head {
   display: flex;

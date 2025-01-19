@@ -14,6 +14,7 @@
                     "rule": "Au début de la partie, prenez autant de jetons de Protocole de Réparation que le grade de votre officier si celui-ci possède la règle Neuromech. Si un officier allié possédant la règle Neuromech est présent sur le théâtre des opérations quand un de vos combattants de type Infanterie est éliminé, vous pouvez choisir de défausser un jeton Protole de Réparation. Dans ce cas le combattant reste en jeu avec un PV."
                 }
             ],
+            "specialties": [" infiltré", " sapeur", " mécano"],
             "profiles": [
                 {
                     "name": "U.R.C Aeternitas",
@@ -232,6 +233,7 @@
                     "rule": "Tous les officiers de la faction bénéficient gratuitement de la règle spéciale 'Hacker'. De plus, lorsqu'un officier de la Science tente de prendre le contrôle d'un Drone, il ignore les résultats avec 0 et 1 réussite."
                 }
             ],
+            "specialties": [" infiltré", " médic", " sapeur", " mécano"],
             "profiles": [
                 {
                     "name": "Clone de ligne Pugnator",
@@ -481,6 +483,7 @@
                     "rule":"Lorsqu'un combattant de type infanterie adverse est éliminé par une arme dotée de la règle spéciale Contagion, placez un Golem à 5cm ou moins de sa position, puis retirez le combattant du théâtre des opérations. Ce golem entre en jeu avec 1D6 points de vie et peut être placé au contact d'un combattant ennemi. Il compte dès lors comme un allié du joueur l'ayant fait apparaître. Un combattant portant une arme dotée de la règle Contagion est immunisé à cette règle."
                 }
             ],
+            "specialties": [" médic", " sapeur", " mécano"],
             "profiles": [
                 {
                     "name": "Soldat de classe Golem",
@@ -701,6 +704,7 @@
                     "rule":"Lors du recrutement, lorsque vous sélectionnez un Igualdad Soldado vous pouvez sélectionner gratuitement un deuxième Igualdad Soldado. Si vous souhaitez équiper ces Soldados, vous devez payer leurs options séparément. Il n'est pas possible de dépenser plus de la moitié de votre budget en Igualdad Soldados. Lors de la constitution de la Pioche d'Activation, ne placez qu'une carte par duo d'Igualdad Soldados. De plus, lorsque vous piochez une carte d'Activation, vous pouvez activer successivement deux Igualdad Soldados."
                 }
             ],
+            "specialties": [" sapeur", " mécano", " hacker"],
             "profiles": [
                 {
                     "name": "Igualdad Soldado",
@@ -1077,6 +1081,7 @@
                     "rule":"Lorsque vous effectuez un test de Volonté, vous pouvez choisir de relancer les dés de votre choix. Chaque dé ne peut être relancé qu'une fois. De plus, les Officiers peuvent donner des ordres sans limite de portée."
                 }
             ],
+            "specialties": [" infiltré", " médic", " mécano"],
             "profiles": [
                 {
                     "name": "Star Eagle trooper",
@@ -1428,6 +1433,7 @@
                     "rule":"Une fois par tour, lorsqu'une carte Activation adverse est piochée, vous pouvez activer un de vos combattants à la place."
                 }
             ],
+            "specialties": [" médic", " sapeur", " mécano"],
             "profiles": [
                 {
                     "name": "Disciple-singe",
@@ -1759,6 +1765,7 @@
                     "rule":"Les blindés de la Faim ne peuvent pas bénéficier de la règle Structure Légère."
                 }
             ],
+            "specialties": [" infiltré", " sapeur", " hacker"],
             "profiles": [
                 {
                     "name": "Pupiphora 'Griffeur'",
@@ -1946,6 +1953,7 @@
                     "rule":"Les armes spéciales coûtent 1 point de plus."
                 }
             ],
+            "specialties": [" infiltré", " médic", " sapeur", " mécano", " hacker"],
             "profiles": [
                 {
                     "name": "",

@@ -10,6 +10,7 @@ headline[0].innerText = storedFaction.name;
 const presentationLorewise = document.querySelector(".presentationLorewise");
 const interaction = document.querySelector(".interaction");
 const presentationGamewise = document.querySelector(".presentationGamewise");
+const gallery = document.querySelector(".gallery");
 
 // affiche le logo et le lore de la Faction
 const logoFaction = document.createElement("img");
@@ -20,8 +21,39 @@ const loreFaction = document.createElement("p");
 loreFaction.innerText = storedFaction.description;
 presentationLorewise.appendChild(loreFaction);
 
+// affiche les règles spéciales de la Faction
+// --------- TODO --------------
+
 // affiche les spécialisations possibles
-// --- TODO ---
+const specialties = document.createElement("div");
+specialties.classList.add("specialties");
+specialties.innerText = ` Spécialités possibles : ${storedFaction.specialties}`;
+presentationGamewise.insertBefore(specialties,gallery);
+
+
+// affiche les règles spéciales et cartes d'unités de la Faction
+createFactionRules(storedFaction.specialRule);
+storedFaction.profiles.forEach(profile => {
+    createUnitCard(storedFaction, profile);
+})
+
+function createFactionRules(factionRules) {
+    const factionRulesWrapper = document.createElement("div");
+    factionRulesWrapper.classList.add("factionRulesWrapper");
+    presentationGamewise.insertBefore(factionRulesWrapper, specialties);
+    factionRules.forEach(rule => {
+        const factionRule = document.createElement("div");
+        const ruleName = document.createElement("p");
+        ruleName.innerText = `${rule.name} :`;
+        ruleName.classList.add("ruleName");
+        factionRule.appendChild(ruleName);
+        const ruleGamewise = document.createElement("p");
+        ruleGamewise.innerText = rule.rule;
+        ruleGamewise.classList.add("ruleGamewise");
+        factionRule.appendChild(ruleGamewise);
+        factionRulesWrapper.appendChild(factionRule);
+    })
+}
 
 function createUnitCard(faction, unit) {
     // creation de nodes
@@ -70,7 +102,7 @@ function createUnitCard(faction, unit) {
     special.classList.add("unitCard_special");
 
     // injection des nodes
-    presentationGamewise.appendChild(unitCard);
+    gallery.appendChild(unitCard);
     // --- div head
     unitCard.appendChild(head);
     head.appendChild(unitLogo);
@@ -111,8 +143,3 @@ function createUnitCard(faction, unit) {
     unitCard.appendChild(special);
     special.appendChild(unitRules);
 }
-
-createUnitCard(storedFaction, storedFaction.profiles[4]);
-
-
-// affiche les règles spéciales et cartes d'unités de la Faction
