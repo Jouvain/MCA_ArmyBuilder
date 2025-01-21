@@ -1,0 +1,154 @@
+:root {
+    --marsRed: #9f0000;
+}
+
+.title {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 24;
+    color: var(--marsRed); 
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* Conteneur principal */
+.header_Wrapper {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    padding: 20px;
+    color: white;
+    width: 100%; /* S'adapte à la largeur de l'écran */
+    box-sizing: border-box; /* Inclure marges et paddings */
+    padding-right: 0;
+    padding-top: 0;
+  }
+  
+  /* Ligne contenant le logo et le texte */
+  .header_lowBar {
+    display: flex;
+    align-items: center; /* Aligner verticalement les éléments */
+    gap: 10px; /* Espacement entre le logo et le texte */
+    width: 100vw;
+  }
+  
+  /* Style pour le logo */
+  .header_lowBar .logo {
+    width: 70px; /* Ajuste la taille du logo */
+    height: auto; /* Conserve les proportions */
+  }
+  
+  /* Conteneur du texte avec bandeau */
+  .text-wrapper {
+    background-image: url('./../img/band.svg'); /* Image de fond pour le bandeau */
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'espace */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    display: flex;
+    align-items: center; /* Centre le texte verticalement */
+    justify-content: center; /* Centre le texte horizontalement */
+    height: 70px; /* Même hauteur que le logo (ajustable selon sa taille réelle) */
+    padding: 0 20px; /* Espacement interne à gauche et à droite du texte */
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Texte */
+  .text-wrapper p {
+    margin: 0; /* Retire les marges par défaut */
+    font-size: 16px; /* Taille de police adaptée */
+    color: white; /* Couleur du texte */
+  }
+
+  .printBtn {
+    position: absolute;
+    right: 5%;
+    background-color: white;
+    color: red;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: unset;
+}
+
+
+.squadResume {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.resume {
+    padding: 20px;
+    text-align: center;
+    border-bottom: solid;
+}
+.costContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 20px;
+    & p {
+        margin: 10px;
+    }
+}
+.mods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.interaction_createBtn {
+    background-color: var(--marsRed);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    margin: 10px;
+    width: 100px;
+}
+
+.builder {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.factionList {
+    width: 50%;
+    height: 100%;
+    border-right: solid var(--marsRed);
+    overflow-y: hidden;
+    & h2 {
+        text-align: center;
+        color: var(--marsRed);
+    }
+    & .factionGallery {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        overflow-y: scroll;
+    }
+}
+.squadList {
+    width: 50%;
+    height: 100%;
+    border-left: solid var(--marsRed);
+    overflow-y: hidden;
+    & h2 {
+        text-align: center;
+        color: var(--marsRed);
+    }
+    & .squadGallery {
+        display: flex;
+        flex-direction: column;
+    }
+}

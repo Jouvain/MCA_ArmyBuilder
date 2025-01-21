@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Army Builder</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <!-- <script src="js/pageFaction.js" defer></script> -->
+        <link rel="stylesheet" href="css/pageSquad.css">
+        <script src="js/pageSquad.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
       </head>
       <body id="body">
@@ -16,7 +16,7 @@
               <a href="index.html"><img src="img/triangle.svg" class="logo" alt="Logo" /></a>
               <div class="text-wrapper">
                 <p class="headline">Choix de la Faction</p>
-                <button>&#x1F5A8</button>
+                <button class="printBtn">&#x1F5A8</button>
               </div>
             </div>
           </div>
@@ -34,13 +34,20 @@
                 </div>                
             </div>
             <div class="mods">
-                <button>Blitz</button>
-                <button>Standard</button>
-                <button>Héroïque</button>
+                <button class="interaction_createBtn">Blitz</button>
+                <button class="interaction_createBtn">Standard</button>
+                <button class="interaction_createBtn">Héroïque</button>
             </div>
           </section>
           <section class="builder">
-            
+              <div class="factionList">
+                  <h2>Faction</h2>
+                  <div class="factionGallery"></div>
+              </div>
+              <div class="squadList">
+                  <h2>Escouade</h2>
+                  <div class="squadGallery"></div>
+              </div>
           </section>
         </main>
       </body>
