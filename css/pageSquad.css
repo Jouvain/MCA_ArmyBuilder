@@ -90,6 +90,7 @@ a {
     padding: 20px;
     text-align: center;
     border-bottom: solid;
+    height: 15vh;
 }
 .costContainer {
     display: flex;
@@ -120,7 +121,7 @@ a {
 .builder {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 62vh;
 }
 .factionList {
     width: 50%;
@@ -130,11 +131,14 @@ a {
     & h2 {
         text-align: center;
         color: var(--marsRed);
+        height: 30px;
+        margin: 0;
+        margin-top: 10px;
     }
     & .factionGallery {
         display: flex;
         flex-direction: column;
-        height: 50%;
+        height: calc(100% - 40px);
         overflow-y: scroll;
     }
 }
@@ -146,9 +150,14 @@ a {
     & h2 {
         text-align: center;
         color: var(--marsRed);
+        height: 30px;
+        margin: 0;
+        margin-top: 10px;
     }
     & .squadGallery {
         display: flex;
         flex-direction: column;
+        overflow-y: auto;
+        height: calc(100% - 40px);
     }
 }
