@@ -28,6 +28,8 @@ function createUnitCard(faction, unit) {
     const unitV = document.createElement("p");
     const unitC = document.createElement("p");
     const stats = document.createElement("div");
+    // ligne de type, reng et stats
+    const typeRangStats = document.createElement("div");
     // weaponHead
     const unitWeaponTitle = document.createElement("p");
     const weaponHead = document.createElement("div");
@@ -52,7 +54,7 @@ function createUnitCard(faction, unit) {
     unitC.innerText = `C : ${unit.combat}`;
     stats.classList.add("unitCard_stats");
     unitWeaponTitle.innerText = "Armes";
-    
+    typeRangStats.classList.add("typeRangStats");
     weaponHead.classList.add("unitCard_weaponHead");
     unitRules.innerText = unit.specialRule;
     special.classList.add("unitCard_special");
@@ -65,15 +67,19 @@ function createUnitCard(faction, unit) {
     head.appendChild(unitLogo);
     head.appendChild(unitName);
     head.appendChild(unitCost);
-    // --- div type & rank
-    unitCard.appendChild(typeAndrank);
+    // --- div type & rank & stats
+    unitCard.appendChild(typeRangStats);
+    typeRangStats.appendChild(typeAndrank)
+    typeRangStats.appendChild(stats);
     typeAndrank.appendChild(unitTypeRank);
     // --- div stats
-    unitCard.appendChild(stats);
+    
     stats.appendChild(unitM);
     stats.appendChild(unitE);
     stats.appendChild(unitV);
     stats.appendChild(unitC);
+
+    
     // --- div weapon head
     unitCard.appendChild(weaponHead);
     weaponHead.appendChild(unitWeaponTitle);

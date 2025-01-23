@@ -128,6 +128,7 @@ a {
     height: 100%;
     border-right: solid var(--marsRed);
     overflow-y: hidden;
+    
     & h2 {
         text-align: center;
         color: var(--marsRed);
@@ -140,6 +141,7 @@ a {
         flex-direction: column;
         height: calc(100% - 40px);
         overflow-y: scroll;
+        align-items: center;
     }
 }
 .squadList {
@@ -161,3 +163,59 @@ a {
         height: calc(100% - 40px);
     }
 }
+
+.unitCard {
+    background-color: var(--marsRed);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 400px;
+    width: 90%;
+    margin: 5px;
+  }
+  .unitCard_head {
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+    img {
+      width: 30px;
+    }
+  }
+  .unitCard_typeAndRank {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p {
+        margin: 0;
+    }
+  }
+  .unitCard_stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    p {
+        margin: 0;
+    }
+  }
+  .unitCard_weaponHead {
+    text-align: center;
+  }
+  .unitCard_weapons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    p {
+        margin: 0;
+    }
+  }
+  .unitCard_special {
+    text-align: center;
+  }
+
+  .typeRangStats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
