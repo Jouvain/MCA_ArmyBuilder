@@ -19,6 +19,7 @@ function createUnitCard(faction, unit) {
     const unitName = document.createElement("h3");
     const unitCost = document.createElement("p");
     const head = document.createElement("div");
+    const addBtn = document.createElement("button");
     // type & rank
     const unitTypeRank = document.createElement("p");
     const typeAndrank = document.createElement("div");
@@ -46,6 +47,9 @@ function createUnitCard(faction, unit) {
     unitName.innerText = unit.name;
     unitCost.innerText = unit.cost;
     head.classList.add("unitCard_head");
+    addBtn.classList.add("addBtn");
+    addBtn.innerText = "+";
+    // addBtn.innerHTML = "&#9960;"
     unitTypeRank.innerText = `type : ${unit.type} / rang: ${unit.rank}`;
     typeAndrank.classList.add("unitCard_typeAndRank");
     unitM.innerText = `M : ${unit.move}`;
@@ -67,6 +71,7 @@ function createUnitCard(faction, unit) {
     head.appendChild(unitLogo);
     head.appendChild(unitName);
     head.appendChild(unitCost);
+    head.appendChild(addBtn);
     // --- div type & rank & stats
     unitCard.appendChild(typeRangStats);
     typeRangStats.appendChild(typeAndrank)
