@@ -72,7 +72,9 @@ function createUnitCard(faction, unit) {
     // --- div head
     unitCard.appendChild(head);
     head.appendChild(unitLogo);
+    unitLogo.classList.add(".unitLogo");
     head.appendChild(unitName);
+    unitName.classList.add(".unitName");
     head.appendChild(unitCost);
     head.appendChild(addBtn);
     // --- div type & rank & stats
@@ -149,6 +151,7 @@ function addUnit(faction, unit) {
 
     // configuration des nodes
     unitCard.classList.add("unitCard");
+    unitCard.classList.add("printable");
     unitLogo.src = faction.logo;
     unitName.innerText = unit.name;
     unitCost.innerText = unit.cost;
@@ -216,3 +219,55 @@ function addUnit(faction, unit) {
     unitCard.appendChild(special);
     special.appendChild(unitRules);
 }
+
+
+document.querySelector(".printBtn").addEventListener("click", () => {
+    const {jsPDF} = window.jspdf;
+    const pdf = new jsPDF({
+        orientation: 'p',
+        unit: 'mm',
+        format: 'a4',
+        putOnlyUsedFonts:true
+       });
+    const selection = document.querySelectorAll(".printable");
+    let yPosition = 10; // Position verticale initiale
+    
+
+    const cardWidth = 100;
+    const cardHeight = 100;
+    const cardFill = [143, 23, 23];
+    const textFill = [0, 0, 0];
+
+    selection.forEach(card => {
+        pdf.setFillColor(...cardFill);
+        pdf.setTextColor(...textFill);
+        pdf.rect(10, yPosition, cardWidth, cardHeight, "F");
+        // Récupérer le contenu de chaque carte
+        card.childNodes.forEach((node)=> {
+            
+            
+            node.childNodes.forEach((subnode)=> {
+                pdf.text(subnode.innerText, 10, yPosition);
+                yPosition += 10; // Ajuster la position verticale
+                console.log(subnode.childNodes);
+            })
+            
+        })
+        console.log(card.childNodes);
+
+        yPosition += cardHeight + 20; // Ajouter un espace après chaque carte
+    
+        // Gérer les pages si nécessaire
+        if (yPosition + cardHeight > pdf.internal.pageSize.getHeight()) {
+            pdf.addPage();
+            yPosition = 20; // Réinitialiser la position sur la nouvelle page
+          }
+      });
+    
+      // Sauvegarder le PDF
+      pdf.save("cartes.pdf");
+
+})
+
+
+  
