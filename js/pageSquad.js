@@ -221,53 +221,116 @@ function addUnit(faction, unit) {
 }
 
 
+
 document.querySelector(".printBtn").addEventListener("click", () => {
-    const {jsPDF} = window.jspdf;
-    const pdf = new jsPDF({
-        orientation: 'p',
-        unit: 'mm',
-        format: 'a4',
-        putOnlyUsedFonts:true
-       });
-    const selection = document.querySelectorAll(".printable");
-    let yPosition = 10; // Position verticale initiale
+
+    const { jsPDF } = window.jspdf;
+
+const pdf = new jsPDF();
+
+// Exemple de données des unités
+const unitCards = [
+  { name: "Unité 1", type: "Infanterie", health: 100, damage: 50 },
+  { name: "Unité 2", type: "Cavalerie", health: 120, damage: 75 },
+  { name: "Unité 3", type: "Archer", health: 80, damage: 40 },
+];
+
+// Dimensions des cartes
+const cardWidth = 180; // Largeur
+const cardHeight = 50; // Hauteur
+let yPosition = 20; // Position verticale de départ
+
+// Styles pour les cartes
+pdf.setFontSize(12);
+
+unitCards.forEach((card, index) => {
+  // Dessiner le contour de la carte
+  pdf.setDrawColor(0); // Couleur de la bordure : noir
+  pdf.setLineWidth(0.5);
+  pdf.rect(10, yPosition, cardWidth, cardHeight); // Rectangle de la carte
+
+  // Couleur de fond de l'en-tête
+  pdf.setFillColor(200, 200, 255); // Bleu clair
+  pdf.rect(10, yPosition, cardWidth, 10, "F"); // En-tête de la carte
+
+  // Texte de l'en-tête
+  pdf.setTextColor(0, 0, 0); // Noir
+  pdf.text(`Carte ${index + 1} - ${card.name}`, 15, yPosition + 7); // Texte de l'en-tête
+
+  // Texte des informations de l'unité
+  const infoLines = [
+    `Type : ${card.type}`,
+    `Santé : ${card.health}`,
+    `Dégâts : ${card.damage}`,
+  ];
+
+  infoLines.forEach((line, i) => {
+    pdf.text(line, 15, yPosition + 17 + i * 7);
+  });
+
+  // Ajuster la position pour la carte suivante
+  yPosition += cardHeight + 10;
+
+  // Si la position dépasse la hauteur de la page, créer une nouvelle page
+  if (yPosition + cardHeight > pdf.internal.pageSize.getHeight()) {
+    pdf.addPage();
+    yPosition = 20; // Réinitialiser la position
+  }
+});
+
+// Sauvegarder le PDF
+pdf.save("cartes_unites.pdf");
+
+
+    // *******************************************
+    // const {jsPDF} = window.jspdf;
+    // const pdf = new jsPDF({
+    //     orientation: 'p',
+    //     unit: 'mm',
+    //     format: 'a4',
+    //     putOnlyUsedFonts:true
+    //    });
+    // const selection = document.querySelectorAll(".printable");
+    // let yPosition = 10; // Position verticale initiale
     
+    // const cardWidth = 100;
+    // const cardHeight = 100;
+    // const cardFill = [143, 23, 23];
+    // const textFill = [0, 0, 0];
 
-    const cardWidth = 100;
-    const cardHeight = 100;
-    const cardFill = [143, 23, 23];
-    const textFill = [0, 0, 0];
-
-    selection.forEach(card => {
-        pdf.setFillColor(...cardFill);
-        pdf.setTextColor(...textFill);
-        pdf.rect(10, yPosition, cardWidth, cardHeight, "F");
-        // Récupérer le contenu de chaque carte
-        card.childNodes.forEach((node)=> {
+    // selection.forEach(card => {
+    //     pdf.setFillColor(...cardFill);
+    //     pdf.setTextColor(...textFill);
+    //     pdf.rect(10, yPosition, cardWidth, cardHeight, "F");
+    //     // Récupérer le contenu de chaque carte
+    //     card.childNodes.forEach((node)=> {
             
             
-            node.childNodes.forEach((subnode)=> {
-                pdf.text(subnode.innerText, 10, yPosition);
-                yPosition += 10; // Ajuster la position verticale
-                console.log(subnode.childNodes);
-            })
+    //         node.childNodes.forEach((subnode)=> {
+    //             pdf.text(subnode.innerText, 10, yPosition);
+    //             yPosition += 10; // Ajuster la position verticale
+    //             console.log(subnode.childNodes);
+    //         })
             
-        })
-        console.log(card.childNodes);
+    //     })
+    //     console.log(card.childNodes);
 
-        yPosition += cardHeight + 20; // Ajouter un espace après chaque carte
+    //     yPosition += cardHeight + 20; // Ajouter un espace après chaque carte
     
-        // Gérer les pages si nécessaire
-        if (yPosition + cardHeight > pdf.internal.pageSize.getHeight()) {
-            pdf.addPage();
-            yPosition = 20; // Réinitialiser la position sur la nouvelle page
-          }
-      });
+    //     // Gérer les pages si nécessaire
+    //     if (yPosition + cardHeight > pdf.internal.pageSize.getHeight()) {
+    //         pdf.addPage();
+    //         yPosition = 20; // Réinitialiser la position sur la nouvelle page
+    //       }
+    //   });
     
-      // Sauvegarder le PDF
-      pdf.save("cartes.pdf");
+    //   // Sauvegarder le PDF
+    //   pdf.save("cartes.pdf");
 
 })
+
+
+
 
 
   
